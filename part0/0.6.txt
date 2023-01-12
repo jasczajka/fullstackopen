@@ -1,0 +1,15 @@
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over browser:
+browser executes js-code 
+that creates a new note and redraws notes
+end note
+browser->server: JSON DATA {content: "newnote", date: "2023-01-12T21:23:11.901Z"}
+server-->browser: HTTP 201(created) https://studies.cs.helsinki.fi/exampleapp/notes
+
+
+
+
+
+
+
+
