@@ -8,6 +8,17 @@ const requestLogger = (request, response, next) => {
     next()
 }
 
+const jwtTokenExtractor = (request, response, next) => {
+    const authorization = request.get('authorization')
+    if (authorization && authorization.startsWith('Bearer ')) {
+        authorization.replace('Bearer ', '')
+    }
+    else{
+        request.authorization = null
+    }
+    next()
+}
+
 const unknownEndpoint = (request, response) => {
     response.status(404).send({ error: 'unknown endpoint' })
 }
@@ -37,6 +48,7 @@ const errorHandler = (error, request, response, next) => {
 
 module.exports = {
     requestLogger,
+    jwtTokenExtractor,
     unknownEndpoint,
     errorHandler
 }
