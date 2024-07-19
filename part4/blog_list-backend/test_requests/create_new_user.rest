@@ -1,0 +1,9 @@
+post http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "root",
+    "name": "Superuser",
+    "password": "salainen",
+    "user": "669a3b3c19815c3c4554d485"
+}

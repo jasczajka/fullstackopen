@@ -1,0 +1,10 @@
+post http://localhost:3003/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjY2OWEzYzIyNzU2MGQzNDFhYTQ2NWQ2ZSIsImlhdCI6MTcyMTM4NjIxOSwiZXhwIjoxNzIxMzg5ODE5fQ.emw2gJPntzqtXqeItdPiwShqeLM2Oj5W0vwtGgAR_sU
+Content-Type: application/json
+
+{
+  "title": "cool_blog",
+  "author": "johny",
+  "url": "test_url",
+  "likes": 44
+}
